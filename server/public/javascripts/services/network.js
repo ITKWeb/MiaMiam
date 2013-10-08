@@ -5,10 +5,14 @@ app.factory("Network", ["$http",
     var isLoginMocked = false;
 
     var peopleList = [
-    {"name": "Marine",
-    "surname": "Miquet", "car": "Twingo de noël", "places": 3},
-    {"name": "Jérémy",
-    "surname": "Flusin", "car": "Non", "places": 0}
+	{ "name":"Marc", "Cars":[{"name":"Dacia", "usedByDefault":true , "places": ["Normal","Normal","Normal","Unconfortable","Unconvenient"]}] },
+{ "name":"Michele"},
+{ "name":"Bastien", "Cars":[{"name":"Voiture 1", "usedByDefault":true , "places": ["Normal","Normal","Normal","Normal","Normal"]}, {"name":"Camion", "usedByDefault":false , places: ["Normal","Normal","Normal","Unconfortable","Unconfortable","Unconfortable","Unconfortable","Unconfortable"]}]},
+{ "name":"Guillaume"},
+{ "name":"Marine", "Cars":[{"name":"Voiture Marine", "usedByDefault":true , "places": ["Normal","Normal","Normal","Normal","Unconfortable"]}]},
+{ "name":"Romain", "Cars":[{"name":"Voiture Romain", "usedByDefault":false , "places": ["Normal","Normal","Normal","Normal"]}]},
+{ "name":"Cuong"},
+{ "name":"Nelly"}
     ];
 
 	function getPeopleList(callback) {
