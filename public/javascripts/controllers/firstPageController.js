@@ -2,10 +2,12 @@ app.controller('firstPageController', ['$scope', 'Network', '$location', functio
 
 
     $scope.clickOnNewMeal = function() {
-        $network.newMeal(function() {
-                $location.path('/meal');          
-        })
+		$location.path('/meal');
     }
 
+	
+	$scope.clickSignUp = function() {
+		$location.path("/signup");
+	}
 
 }]);
