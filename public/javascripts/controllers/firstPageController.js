@@ -2,7 +2,7 @@ app.controller('firstPageController', ['$scope', 'Network', '$location', functio
 
 
     $scope.clickOnNewMeal = function() {
-        $location.path('/meal');
+        $location.path('/peopleList');
     }
 
     $scope.clickSignUp = function() {
