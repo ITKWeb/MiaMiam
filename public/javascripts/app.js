@@ -12,7 +12,9 @@ app.config(["$routeProvider", "$httpProvider",
         templateUrl: 'views/peopleList.html',
         controller: "PeopleListController"
       })	  
-
+      .when('/signup', {
+        templateUrl: 'views/signup.html'
+      })	  
 
       .otherwise({
         redirectTo: '/'
