@@ -1,0 +1,15 @@
+.tab{
+margin: 0 auto;
+}
+.tabHeader{
+border-radius: 8px;
+/*border:2px solid #BF7E5F;*/
+background-color: rgba(191, 126, 95, 1);
+}
+.tabBody{
+border-radius: 8px;
+/*border:2px solid #BF7E5F;*/
+background-color: rgba(248, 240, 236, 0.7);
+}
+
+
