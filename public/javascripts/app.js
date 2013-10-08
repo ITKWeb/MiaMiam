@@ -8,10 +8,11 @@ app.config(["$routeProvider", "$httpProvider",
         templateUrl: 'views/firstPage.html',
         controller: "firstPageController"
       })
-       .when('/meal', {
-            templateUrl: 'views/meal.html',
-          
-        })
+      .when('/peopleList', {
+        templateUrl: 'views/peopleList.html',
+        controller: "PeopleListController"
+      })	  
+
 
       .otherwise({
         redirectTo: '/'

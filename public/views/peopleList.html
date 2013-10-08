@@ -1,0 +1,29 @@
+  
+<section class="max-width text-center big-padding-bottom" >
+
+    <div class="container">
+        <H2> Liste des utilisateurs: </H2>
+<!--		<body ng-controller="peopleController">
+			<tbody ng-repeat="drivers" >
+			  <tr >
+				<td class="driver">{{driver.nom}}</td>
+				<td class="driver">{{driver.nbPlaces}} %</td>
+				
+			  </tr>
+			  <tr ng-repeat="pedestrian" >
+				<td >{{pedestrian.nom}} </td>
+			  </tr>
+			<tbody>
+		</body>-->
+
+ 
+	<ul>
+		<li ng-repeat="people in peopleList">
+		{{people.name}} possède la voiture: {{people.car}} avec {{people.places}} places</p>
+		</li>
+	</ul>
+ 
+
+	</div>
+</section>
+
