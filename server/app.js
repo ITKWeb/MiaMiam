@@ -3,6 +3,7 @@
  * Module dependencies.
  */
 
+
 var express = require('express');
 var routes = require('./routes');
 var user = require('./routes/user');
@@ -11,29 +12,36 @@ var path = require('path');
 
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/nodetest1');
+//var db = monk('localhost:27017/miam');
+var db = monk('192.168.1.21:27017/miam');
 
 var app = express();
 
-// all environments
+//all environments
 app.set('port', process.env.PORT || 3000);
-app.set('views', __dirname + '/views');
-app.set('view engine', 'jade');
-app.use(express.favicon());
-app.use(express.logger('dev'));
-app.use(express.bodyParser());
-app.use(express.methodOverride());
-app.use(express.cookieParser('your secret here'));
-app.use(express.session());
-app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
-
+//app.set('views', __dirname + '/public/views');
+//app.set('view engine', 'jade');
+// app.use(express.favicon());
+// app.use(express.logger('dev'));
+// app.use(express.bodyParser());
+// app.use(express.methodOverride());
+// app.use(express.cookieParser('your secret here'));
+// app.use(express.session());
+// app.use(app.router);
+//app.use(express.static(path.join(__dirname, './public/views')));
+//console.log(path);
+app.use(express.static(path.join(__dirname, './public')));
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', routes.index);
+//app.get('/', routes.index);
+app.get('/', function(req, res){
+  res.render('index');
+  // console.log(res);
+  // res.render('index.html');
+});
 app.get('/users', user.list);
 app.get('/userlist', routes.userlist(db));
 
