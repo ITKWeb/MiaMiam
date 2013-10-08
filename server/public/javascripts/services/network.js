@@ -13,13 +13,19 @@ app.factory("Network", ["$http",
 
 	function getPeopleList(callback) {
 		callback(peopleList);
-    }
+	}
 
-
+	function addUser(user){
+	    $http.post("http://localhost:3000/adduser", user);
+	}
     
  return {
     getPeopleList: function(callback) {
         getPeopleList(callback);
+    },
+
+    addUser: function(user) {
+	addUser(user);
     }
  };
 

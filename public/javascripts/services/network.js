@@ -15,6 +15,7 @@ app.factory("Network", ["$http",
 		callback(peopleList);
     }
 
+	
 
     
  return {

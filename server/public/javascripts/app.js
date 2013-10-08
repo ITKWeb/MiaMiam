@@ -13,7 +13,8 @@ app.config(["$routeProvider", "$httpProvider",
         controller: "PeopleListController"
       })	  
       .when('/signup', {
-        templateUrl: 'views/signup.html'
+        templateUrl: 'views/signup.html',
+	controller: "SignupController"
       })	  
 
       .otherwise({
