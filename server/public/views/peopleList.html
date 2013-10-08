@@ -3,25 +3,28 @@
 
     <div class="container">
         <H2> Liste des utilisateurs: </H2>
-<!--		<body ng-controller="peopleController">
-			<tbody ng-repeat="drivers" >
-			  <tr >
-				<td class="driver">{{driver.nom}}</td>
-				<td class="driver">{{driver.nbPlaces}} %</td>
+		<body>
+			<table class="tab">
+			  <tr class="tabHeader">
+				<td >Nom</td>
+				<td> Voiture(s) </td>	
+					
 				
-			  </tr>
-			  <tr ng-repeat="pedestrian" >
-				<td >{{pedestrian.nom}} </td>
+			  </tr >
+			  <tr class="tabBody" ng-repeat="people in peopleList">
+				<td >{{people.name}} </td>
+				<td> <div ng-repeat="car in people.Cars" > {{car.name}} : {{car.places.length}} places </div> </td>
+		
 			  </tr>
 			<tbody>
-		</body>-->
+		</body>
 
  
-	<ul>
+<!--	<ul>
 		<li ng-repeat="people in peopleList">
 		{{people.name}} possède la voiture: {{people.car}} avec {{people.places}} places</p>
 		</li>
-	</ul>
+	</ul-->
  
 
 	</div>
