@@ -4,11 +4,11 @@
 
   <h2>Ajouter un utilisateur</h2>
   <div>
-      First name: <input type="text" name="name" ng-model="user.Name"><br>
+      First name: <input type="text" name="Name" ng-model="user.Name"><br>
       <button ng-click="addCar();">Ajouter voiture</button>
       <div ng-repeat="car in user.Cars track by $index">
 	Used by default: <input type="checkbox" ng-model="car.useByDefault">
-	Name: <input type="text" ng-model="car.name">
+	Name: <input type="text" ng-model="car.Name">
 	<div ng-repeat="place in car.Places track by $index">
 	  Confort: <input type="radio" name="{{$index}}" value="Normal" ng-model="place"> Normal
 	  <input type="radio" name="{{$index}}" value="Unconfortable" ng-model="place"> Inconfortable

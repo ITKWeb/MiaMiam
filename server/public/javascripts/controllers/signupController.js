@@ -1,7 +1,7 @@
 app.controller('SignupController', ['$scope', 'Network', '$location', function($scope, $network, $location) {
 
     $scope.user = {
-	name:undefined,
+	Name:undefined,
 	Cars:[]
     }
 
