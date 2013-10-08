@@ -4,8 +4,7 @@
 
   <h2>Ajouter un utilisateur</h2>
   <div>
-    <form>
-      First name: <input type="text" name="name" ng-model="user.name"><br>
+      First name: <input type="text" name="name" ng-model="user.Name"><br>
       <button ng-click="addCar();">Ajouter voiture</button>
       <div ng-repeat="car in user.Cars track by $index">
 	Used by default: <input type="checkbox" ng-model="car.useByDefault">
@@ -18,7 +17,6 @@
 	<button ng-click="addPlace(car);">Ajouter place</button>
       </div>
     <button ng-click="validate();">Valider</button>
-    </form>
   </div>
 
 </section>

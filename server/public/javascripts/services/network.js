@@ -16,6 +16,7 @@ app.factory("Network", ["$http",
 	}
 
 	function addUser(user){
+	    console.log(user);
 	    $http.post("http://localhost:3000/adduser", user);
 	}
     

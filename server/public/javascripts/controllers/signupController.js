@@ -7,7 +7,7 @@ app.controller('SignupController', ['$scope', 'Network', '$location', function($
 
     $scope.addCar = function(){
 	$scope.user.Cars.push({
-	    name:undefined,
+	    Name:undefined,
 	    usedByDefault:false,
             Places:['Normal']
 	});
