@@ -19,6 +19,6 @@ app.controller('SignupController', ['$scope', 'Network', '$location', function($
     }
 
     $scope.validate = function(){
-	$network.addUser(user);
+	$network.addUser($scope.user);
     }
 }]);
