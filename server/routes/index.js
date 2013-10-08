@@ -46,3 +46,38 @@ exports.userlist = function(db){
 		};
 	};
 };
+
+exports.adduser = function(db) {
+    return function(req, res) {
+
+        // Get our form values. These rely on the "name" attributes
+		//console.log(req.body.username);        
+        var userName = req.body.Name;
+        var userCars = req.body.Cars;
+
+        console.log(userName);
+        console.log(userCars);
+
+        // Set our collection
+        var collection = db.get('miam');
+
+        // // Submit to the DB
+        collection.insert({
+            "Name" : userName,
+            "Cars" : userCars
+        }, function (err, doc) {
+            if (err) {
+                // If it failed, return error
+                res.send("There was a problem adding the information to the database.");
+            }
+            else {
+            	console.log("postworked...")
+                // If it worked, forward to success page
+                //res.redirect("userlist");
+                // And set the header so the address bar doesn't still say /adduser
+                //res.location("userlist");
+            }
+        });
+
+    }
+}
