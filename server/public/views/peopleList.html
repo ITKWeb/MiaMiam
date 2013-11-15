@@ -6,15 +6,14 @@
 		<body>
 			<table class="tab">
 			  <tr class="tabHeader">
-				<td >Nom</td>
+				<td> Nom</td>
 				<td> Voiture(s) </td>	
 					
 				
 			  </tr >
 			  <tr class="tabBody" ng-repeat="people in peopleList">
 				<td >{{people.name}} </td>
-				<td> <div ng-repeat="car in people.Cars" > {{car.name}} : {{car.places.length}} places </div> </td>
-		
+				<!--td> <div ng-repeat="car in people.Cars" > {{car.Name}}  </div> </td-->
 			  </tr>
 			<tbody>
 		</body>

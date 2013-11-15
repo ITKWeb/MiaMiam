@@ -14,7 +14,7 @@ app.config(["$routeProvider", "$httpProvider",
       })	  
       .when('/signup', {
         templateUrl: 'views/signup.html',
-	controller: "SignupController"
+	controller: "signupController"
       })	  
 
       .otherwise({
