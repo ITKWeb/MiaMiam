@@ -1,5 +1,5 @@
-app.factory("Network", ["$http",
-    function ($http) {
+app.factory("Network", ["$http", "$location",
+    function ($http, $location) {
   
     var isMocked = false;
     var isLoginMocked = false;
@@ -16,12 +16,28 @@ app.factory("Network", ["$http",
     ];
 
 	function getPeopleList(callback) {
+	  if (isMocked === true) {
 		callback(peopleList);
+	}else{
+	   $http.get("/userlist")
+          .success(callback)
+          .error(
+            function(data, status, headers, config) {
+              console.log("erreur");
+            }
+          );
+		
+	
+	}
+	  
+	  
+		
 	}
 
 	function addUser(user){
 	    console.log(user);
-	    $http.post("http://localhost:3000/adduser", user);
+	    $http.post("/adduser", user);
+	    $location.path("/peopleList");
 	}
     
  return {
