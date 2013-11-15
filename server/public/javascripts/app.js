@@ -10,7 +10,7 @@ app.config(["$routeProvider", "$httpProvider",
       })
       .when('/peopleList', {
         templateUrl: 'views/peopleList.html',
-        controller: "PeopleListController"
+        controller: "peopleListController"
       })	  
       .when('/signup', {
         templateUrl: 'views/signup.html',
