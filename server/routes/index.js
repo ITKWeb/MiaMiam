@@ -38,9 +38,9 @@ exports.userlist = function(db){
 
 		return function(req, res){
 			var collection = db.get('miam');
-			//console.log(db);
+			console.log(db);
 			collection.find({},{}, function(e, docs){
-				//console.log(docs);
+				console.log(docs);
 				res.json(docs);
 			});	
 		};

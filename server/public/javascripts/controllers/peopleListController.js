@@ -3,7 +3,8 @@ app.controller('peopleListController', ['$scope', 'Network', '$location', functi
 
     $network.getPeopleList ( function(peopleList) {
 	   $scope.peopleList = peopleList;
-	   console.log("peopleList");
+	    console.log("peopleListController");
+	   console.log(peopleList);
     })
 
 
