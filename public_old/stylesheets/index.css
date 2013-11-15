@@ -3,14 +3,11 @@ html{
     height: 100%;
 }
 body{
-	height:90%;
+	height:100%;
 	font-family : sans-serif;
 	font-size : 0.9em;
 	color:#5E5E5E;
 	background:#FFE5CC;
-}
-div{
-	min-width: 200px;
 }
 #container{
 	position:relative;
@@ -22,7 +19,7 @@ div{
 	margin:0 auto;
 	width:90%;
 	max-width:1400px;
-	padding:2% 0;
+	padding:20px 0;
 }
 
 .big-padding-bottom{
@@ -34,24 +31,22 @@ div{
 
 .panel-left{
 display:inline-block;
-margin: 1%;
+margin: 20px;
 width: 30%;
 border-radius: 8px;
 /*border:2px solid #BF7E5F;*/
 background-color: rgba(191, 126, 95, 0.5); /*#BF7E5F;*/
-height: 20%;
-padding: 1% 1%;
+
 }
 
 .panel-right{
 display:inline-block;
-margin: 1%;
+margin: 20px;
 width: 30%;
 border-radius: 8px;
 /*border:2px solid #A36685;*/
 background-color: rgba(163, 102, 133, 0.5);
-height: 50%;
-padding: 1% 1%;
+
 }
 
 .panel-left:hover{
@@ -65,6 +60,7 @@ background-color: rgba(163, 102, 133, 0.8);
 h1{
 	text-align: center;
 	font-size:1.4em;
+	padding:40px 0 20px;
 	font-variant: small-caps;
 }
 .aligntop{vertical-align: top;padding-top:5px;}
@@ -72,8 +68,10 @@ h1{
 .bold{font-weight:bold;}
 
 
+
 .btn{
 	display:inline-block;
+	margin:10px;
 	padding:10px 20px;
 	background-color:#F0F0F0;
 	border-radius:3px;
@@ -83,8 +81,6 @@ h1{
 	text-decoration:none;
 	vertical-align:top;
 	cursor:pointer;
-	width: 50%;
-	min-width: 100px;
 }
 .big-btn{
 	padding:20px;

@@ -1,0 +1,46 @@
+  
+<section class="max-width text-center big-padding-bottom">
+    <img src="./images/MiaMiam.jpg" alt="T'as faim ? Tu viens !" />
+    <p class="texte"> A table !!  </p>
+
+    <div class="container">
+        <!--
+            <div class="loginBox">
+                <label class="label" >Utilisateur:</label>
+                <input class="box" type="text" ng-model="login"/>
+            </div>
+            <div class="loginBox">
+                <label class="label">Mot de passe: </label>
+                <input class="box" type="password" ng-model="password"/><br/>
+            </div>
+            <div>
+            <a href="" ng-click="clickOnLogin()" class="btn btn-grey">Se connecter</a>
+            <a href="" ng-click="clickOnForgotten()" class="btn btn-grey">Mot de passe oublié ?</a>
+            </div>
+        -->
+		<div class="panel-left">
+			<form novalidate id="connexion">
+				<h1> Créer un nouvel utilisateur </h1>
+				<div  id="login">
+					<label for="inputLogIn"> Nom d'utilisateur <span class="error_message"></span>: </label>
+					<input type="text" placeholder="ex: Maïté" name="login" id="inputLogIn" ng-model="login">
+				</div>
+				<div id="password">
+					<label for="inputPassword"> Voiture <span class="error_message"></span>: </label>
+						<input type="radio" name="car" value="yes" />Oui
+                        <input type="radio" name="car" value="no" />Non
+
+				</div>
+
+			<button type="submit" ng-click="clickSignUp()" class="btn btn-grey"> Enregistrer </button>
+
+			</form>
+		</div>
+		<div class="panel-right">
+			<h1> Aller manger </h1>		
+			<button type="submit" ng-click="clickOnNewMeal()" class="btn btn-grey"> Nouveau repas </button>
+
+		</div>
+
+    </div>
+</section>

@@ -1,0 +1,26 @@
+
+<section class="max-width text-center big-padding-bottom">
+
+
+  <h2>Ajouter un utilisateur</h2>
+  <div>
+    <form>
+      First name: <input type="text" name="name" ng-model="user.name"><br>
+      <button ng-click="addCar();">Ajouter voiture</button>
+      <div ng-repeat="car in user.Cars track by $index">
+	Used by default: <input type="checkbox" ng-model="car.useByDefault">
+	Name: <input type="text" ng-model="car.name">
+	<div ng-repeat="place in car.Places track by $index">
+	  Confort: <input type="radio" name="{{$index}}" value="Normal" ng-model="place"> Normal
+	  <input type="radio" name="{{$index}}" value="Unconfortable" ng-model="place"> Inconfortable
+	  <input type="radio" name="{{$index}}" value="Unconvenient" ng-model="place"> Pas pratique
+	</div>
+	<button ng-click="addPlace(car);">Ajouter place</button>
+      </div>
+    <button ng-click="validate();">Valider</button>
+    </form>
+  </div>
+
+</section>
+
+
