@@ -1,0 +1,30 @@
+body{
+	height:100%;
+	font-family : sans-serif;
+	font-size : 0.9em;
+	color:#5E5E5E;
+	background:#FFE5CC;
+}
+.divAlign{
+	display: inline-block;
+}
+.btnPlace{
+	display:inline-block;
+	background-color:rgba(240, 240, 240, 0.7);
+	border-radius:3px;
+	border:1px solid #DDD;
+	box-shadow: 0 -1px 0 0 #999999 inset, 0 1px 0 0 #FFFFFF inset;
+	text-decoration:none;
+	vertical-align:top;
+	cursor:pointer;
+}
+.panel{
+
+border-radius: 8px;
+width:40%;
+padding: 2px;
+margin: 0 auto;
+margin-bottom: 5px;
+/*border:2px solid #BF7E5F;*/
+background-color: rgba(191, 126, 95, 0.5);
+}

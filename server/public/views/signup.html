@@ -4,19 +4,32 @@
 
   <h2>Ajouter un utilisateur</h2>
   <div>
-      First name: <input type="text" name="Name" ng-model="user.Name"><br>
-      <button ng-click="addCar();">Ajouter voiture</button>
-      <div ng-repeat="car in user.Cars track by $index">
+       <h3>Nom d'utilisateur </h3>
+      <input type="text" name="Name" ng-model="user.Name">
+  </div>
+
+  <div>
+  		
+  	<h3 class="divAlign">Voiture </h3>
+    <button ng-click="addCar();" class="btn divAlign">Ajouter voiture</button>
+      
+    <div class="panel" ng-repeat="car in user.Cars track by $index">
+	
+
 	Used by default: <input type="checkbox" ng-model="car.usedByDefault">
 	Name: <input type="text" ng-model="car.Name">
+	
+	<button class="divAlign btnPlace" ng-click="addPlace(car);"><img src="./images/plus.png" alt=""/> place</button>
+
 	<div ng-repeat="place in car.Places track by $index">
 	  Confort: <input type="radio" name="{{$index}}" value="Normal" ng-model="place"> Normal
 	  <input type="radio" name="{{$index}}" value="Unconfortable" ng-model="place"> Inconfortable
 	  <input type="radio" name="{{$index}}" value="Unconvenient" ng-model="place"> Pas pratique
 	</div>
-	<button ng-click="addPlace(car);">Ajouter place</button>
+
       </div>
-    <button ng-click="validate();">Valider</button>
+    <div>    <button ng-click="validate();" class ="btn btn-grey">Valider</button></div>
+
   </div>
 
 </section>
