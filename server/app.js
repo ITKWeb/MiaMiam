@@ -4,9 +4,7 @@
  */
 
 
-var express = require('express');
-var routes = require('./routes');
-var user = require('./routes/user');
+GOODBYE_KITTY();
 var http = require('http');
 var path = require('path');
 
